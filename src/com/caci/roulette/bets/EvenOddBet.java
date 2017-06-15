@@ -9,6 +9,8 @@ import com.caci.roulette.game.Wheel;
 
 public class EvenOddBet extends Bet {
 
+	public static final int evenOddWinAmountMultiplier = 2;
+
 	public EvenOddBet(final String description, final int payout) {
 		super(description, payout);
 
@@ -35,6 +37,11 @@ public class EvenOddBet extends Bet {
 	// right most bit always is 1 for odd numbers
 	public boolean isOdd(final long number) {
 		return (number & 0X1) == 1;
+	}
+
+	@Override
+	public int getPayout() {
+		return evenOddWinAmountMultiplier;
 	}
 
 }

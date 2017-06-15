@@ -29,10 +29,10 @@ public class BetTest {
 
 	@Test
 	public void testBlackRedBet() {
-		BlackRedBet b = new BlackRedBet("Bet", 10);
+		BlackRedBet b = new BlackRedBet("Bet", 1);
 		String whichBet = BetColor.RED.name();
 		assertEquals("Bet", b.getDescription());
-		assertEquals(10, b.getPayout());
+		assertEquals(36, b.getPayout());
 		assertEquals(true, b.determineWin(whichBet, clone));
 		whichBet = BetColor.BLACK.name();
 		assertEquals(false, b.determineWin(whichBet, clone));
@@ -41,10 +41,10 @@ public class BetTest {
 
 	@Test
 	public void testEvenOddBet() {
-		EvenOddBet b = new EvenOddBet("Bet", 10);
+		EvenOddBet b = new EvenOddBet("Bet", 1);
 		String whichBet = NumberType.ODD.name();
 		assertEquals("Bet", b.getDescription());
-		assertEquals(10, b.getPayout());
+		assertEquals(2, b.getPayout());
 		assertEquals(true, b.determineWin(whichBet, clone));
 		whichBet = NumberType.EVEN.name();
 		assertEquals(false, b.determineWin(whichBet, clone));

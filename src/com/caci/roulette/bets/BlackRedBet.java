@@ -9,6 +9,8 @@ import com.caci.roulette.game.Wheel;
 
 public class BlackRedBet extends Bet {
 
+	public static final int bleacRedWinMultiplierAmount = 36;
+
 	public BlackRedBet(final String description, final int payout) {
 		super(description, payout);
 
@@ -27,6 +29,11 @@ public class BlackRedBet extends Bet {
 		choices.add(BetColor.RED.name());
 		System.out.println();
 		return ConsoleReader.enterYourChoice("Please bet", choices);
+	}
+
+	@Override
+	public int getPayout() {
+		return bleacRedWinMultiplierAmount;
 	}
 
 }
