@@ -29,25 +29,25 @@ public class BetTest {
 
 	@Test
 	public void testBlackRedBet() {
-		BlackRedBet b = new BlackRedBet("Bet", 1);
+		BlackRedBet b = new BlackRedBet("Bet", 10);
 		String whichBet = BetColor.RED.name();
-		assertEquals(b.getDescription(), "Bet");
-		assertEquals(b.getPayout(), 1);
-		assertEquals(b.determineWin(whichBet, clone), true);
+		assertEquals("Bet", b.getDescription());
+		assertEquals(10, b.getPayout());
+		assertEquals(true, b.determineWin(whichBet, clone));
 		whichBet = BetColor.BLACK.name();
-		assertEquals(b.determineWin(whichBet, clone), false);
+		assertEquals(false, b.determineWin(whichBet, clone));
 
 	}
 
 	@Test
 	public void testEvenOddBet() {
-		EvenOddBet b = new EvenOddBet("Bet", 1);
+		EvenOddBet b = new EvenOddBet("Bet", 10);
 		String whichBet = NumberType.ODD.name();
-		assertEquals(b.getDescription(), "Bet");
-		assertEquals(b.getPayout(), 1);
-		assertEquals(b.determineWin(whichBet, clone), true);
+		assertEquals("Bet", b.getDescription());
+		assertEquals(10, b.getPayout());
+		assertEquals(true, b.determineWin(whichBet, clone));
 		whichBet = NumberType.EVEN.name();
-		assertEquals(b.determineWin(whichBet, clone), false);
+		assertEquals(false, b.determineWin(whichBet, clone));
 
 	}
 
@@ -55,11 +55,11 @@ public class BetTest {
 	public void testThreeInARowBet() {
 		ThreeInARowBet b = new ThreeInARowBet("Bet", 11);
 		String whichBet = "21";
-		assertEquals(b.getDescription(), "Bet");
-		assertEquals(b.getPayout(), 11);
-		assertEquals(b.determineWin(whichBet, clone), true);
+		assertEquals("Bet", b.getDescription());
+		assertEquals(11, b.getPayout());
+		assertEquals(true, b.determineWin(whichBet, clone));
 		whichBet = "20";
-		assertEquals(b.determineWin(whichBet, clone), false);
+		assertEquals(false, b.determineWin(whichBet, clone));
 
 	}
 
@@ -67,11 +67,11 @@ public class BetTest {
 	public void testTwoInARowBet() {
 		TwoInARowBet b = new TwoInARowBet("Bet", 17);
 		String whichBet = "22";
-		assertEquals(b.getDescription(), "Bet");
-		assertEquals(b.getPayout(), 17);
-		assertEquals(b.determineWin(whichBet, clone), true);
+		assertEquals("Bet", b.getDescription());
+		assertEquals(17, b.getPayout());
+		assertEquals(true, b.determineWin(whichBet, clone));
 		whichBet = "20";
-		assertEquals(b.determineWin(whichBet, clone), false);
+		assertEquals(false, b.determineWin(whichBet, clone));
 
 	}
 
@@ -79,11 +79,11 @@ public class BetTest {
 	public void testHighLowBet() {
 		HighLowBet b = new HighLowBet("Bet", 1);
 		String whichBet = BetType.HIGH.name();
-		assertEquals(b.getDescription(), "Bet");
-		assertEquals(b.getPayout(), 1);
-		assertEquals(b.determineWin(whichBet, clone), true);
+		assertEquals("Bet", b.getDescription());
+		assertEquals(1, b.getPayout());
+		assertEquals(true, b.determineWin(whichBet, clone));
 		whichBet = BetType.LOW.name();
-		assertEquals(b.determineWin(whichBet, clone), false);
+		assertEquals(false, b.determineWin(whichBet, clone));
 
 	}
 
@@ -91,11 +91,11 @@ public class BetTest {
 	public void testSingleNumberBet() {
 		SingleNumberBet b = new SingleNumberBet("Bet", 35);
 		String whichBet = "23";
-		assertEquals(b.getDescription(), "Bet");
-		assertEquals(b.getPayout(), 35);
-		assertEquals(b.determineWin(whichBet, clone), true);
+		assertEquals("Bet", b.getDescription());
+		assertEquals(35, b.getPayout());
+		assertEquals(true, b.determineWin(whichBet, clone));
 		whichBet = "20";
-		assertEquals(b.determineWin(whichBet, clone), false);
+		assertEquals(false, b.determineWin(whichBet, clone));
 
 	}
 }
