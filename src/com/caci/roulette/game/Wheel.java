@@ -2,20 +2,13 @@ package com.caci.roulette.game;
 
 import java.util.Random;
 
-/**
- * Represents a roulette wheel that can be spun to get a color, either red,
- * black, or green, and a number, between 0 and 37. The numbers 0 and 37
- * represent the roulette values 0 and 00, respectively.
- * 
- * @author Robert C. Duvall
- */
 public class Wheel {
 	// constants
 	public static final String RED = "RED";
 	public static final String BLACK = "BLACK";
 	public static final String GREEN = "GREEN";
 
-	// wheel values --- not quite every other one :(
+	// wheel values
 	private static final String[] OUR_SPOTS = {GREEN, RED, BLACK, RED, BLACK,
 			RED, BLACK, RED, BLACK, RED, BLACK, BLACK, RED, BLACK, RED, BLACK,
 			RED, BLACK, RED, RED, BLACK, RED, BLACK, RED, BLACK, RED, BLACK,

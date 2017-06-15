@@ -1,7 +1,6 @@
 package com.caci.roulette.test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -21,13 +20,13 @@ public class PlayerTest {
 		Player g;
 
 		g = new Player("Robert", 0);
-		assertTrue(!g.isSolvent());
+		assertEquals(false, g.isSolvent());
 
 		g = new Player("Robert", -1);
-		assertTrue(!g.isSolvent());
+		assertEquals(false, g.isSolvent());
 
 		g = new Player("Robert", 1);
-		assertTrue(g.isSolvent());
+		assertEquals(true, g.isSolvent());
 	}
 
 	@Test
@@ -35,13 +34,13 @@ public class PlayerTest {
 		Player g = new Player("Robert", 1);
 
 		g.updateBankroll(0);
-		assertEquals(g.getBankroll(), 1);
+		assertEquals(1, g.getBankroll());
 		g.updateBankroll(-1);
-		assertEquals(g.getBankroll(), 0);
+		assertEquals(0, g.getBankroll());
 		g.updateBankroll(2);
-		assertEquals(g.getBankroll(), 2);
+		assertEquals(2, g.getBankroll());
 		g.updateBankroll(13);
-		assertEquals(g.getBankroll(), 15);
+		assertEquals(15, g.getBankroll());
 	}
 
 }
