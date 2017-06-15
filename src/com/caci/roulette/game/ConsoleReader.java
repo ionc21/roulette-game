@@ -28,9 +28,9 @@ public class ConsoleReader {
 		while (true) {
 			try {
 				Integer enteredNumber = Integer.parseInt(enteredString(prompt));
-				if (enteredNumber < 0) {
+				if (enteredNumber <= 0) {
 					throw new RouletteGameException(
-							"You cannot bet a negative amount");
+							"You cannot enter bet a negative amount");
 				} else {
 					return enteredNumber;
 				}
